@@ -156,7 +156,7 @@ a { color: inherit; }
   padding: 18px 16px; display: flex; flex-direction: column; gap: 8px;
   border: 1px solid rgba(255,255,255,0.12);
 }
-.mega__feature img { height: 20px; opacity: 0.9; }
+.mega__feature img { height: 20px; width: auto; align-self: flex-start; opacity: 0.9; }
 .mega__feature .ft-title { font-size: 15px; font-weight: 700; font-family: var(--font-display); line-height: 1.25; margin-top: 4px; }
 .mega__feature .ft-body { font-size: 12px; color: var(--fg-on-dark-2); line-height: 1.45; }
 .mega__feature .ft-cta { margin-top: auto; padding-top: 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--accent-cyan); }
