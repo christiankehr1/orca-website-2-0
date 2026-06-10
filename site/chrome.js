@@ -171,13 +171,13 @@
       '<div class="wrap footer__grid">' +
         '<div><div class="footer__brand"><img src="assets/orca-symbol-white.png" alt="" /><span class="orca-wordmark">ORCA</span></div>' +
           '<div class="footer__blurb">The easiest, fastest, most intelligent and secure way to store, manage, analyze and share your legal information.</div>' +
-          '<div class="footer__tag">#getorcanized</div></div>' +
+          '<div class="footer__tag">#getorcanized ;)</div></div>' +
         footCol('Platform', [['platform.html','Document-to-truth'],['platform.html','Consolidate'],['platform.html','Reconcile &amp; check'],['platform.html','Share &amp; collaborate'],['platform.html','The 4 Levels']]) +
         footCol('Solutions', [['segment.html','Family Offices'],['solutions.html','PE &amp; Investment'],['solutions.html','Real Estate'],['solutions.html','Operating Companies'],['solutions.html','Law &amp; Trust'],['solutions.html','Advisors']]) +
         footCol('Company', [['why-orca.html','Why ORCA'],['customers.html','Customers'],['#','Resources'],['watch-demo.html','Watch a demo'],['#','Log in']]) +
       '</div>' +
       '<div class="footer__bar"><div class="wrap row">' +
-        '<span>© 2026 ORCA AG · Zug, Switzerland</span>' +
+        '<span>© 2026 ORCA AG · Zurich, Switzerland 🇨🇭</span>' +
         '<span>Swiss data centres · 256-bit encryption · zero-knowledge · GDPR</span>' +
       '</div></div>' +
     '</footer>';
