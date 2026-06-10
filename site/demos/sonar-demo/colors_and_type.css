@@ -1,0 +1,196 @@
+/* ============================================================
+   ORCA — Colors & Type foundations
+   "Serene Action" — ocean serenity + ocean action
+   ------------------------------------------------------------
+   FONT NOTE: The product app ships on INTER (self-hosted below,
+   variable + Inter Display). Inter is the real UI typeface and
+   a strong stand-in for the brand's aspirational display face,
+   PROXIMA NOVA (commercial, used for marketing/logo only).
+   See fonts/README.md.
+   ============================================================ */
+
+/* ---- Inter (body / UI) — variable, covers weight 100–900 ---- */
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('fonts/InterVariable.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-style:italic;font-weight:100 900;font-display:swap;
+  src:url('fonts/InterVariable-Italic.woff2') format('woff2');}
+
+/* ---- Inter Display (headlines / wordmark) — static cuts ---- */
+@font-face{font-family:'Inter Display';font-weight:300;font-display:swap;src:url('fonts/InterDisplay-Light.woff2') format('woff2');}
+@font-face{font-family:'Inter Display';font-weight:400;font-display:swap;src:url('fonts/InterDisplay-Regular.woff2') format('woff2');}
+@font-face{font-family:'Inter Display';font-weight:500;font-display:swap;src:url('fonts/InterDisplay-Medium.woff2') format('woff2');}
+@font-face{font-family:'Inter Display';font-weight:600;font-display:swap;src:url('fonts/InterDisplay-SemiBold.woff2') format('woff2');}
+@font-face{font-family:'Inter Display';font-weight:700;font-display:swap;src:url('fonts/InterDisplay-Bold.woff2') format('woff2');}
+@font-face{font-family:'Inter Display';font-weight:800;font-display:swap;src:url('fonts/InterDisplay-ExtraBold.woff2') format('woff2');}
+@font-face{font-family:'Inter Display';font-weight:900;font-display:swap;src:url('fonts/InterDisplay-Black.woff2') format('woff2');}
+
+:root {
+  /* ---------------------------------------------------------
+     1. CORE PALETTE — surface → depth
+     Four tones travelling from the lit surface to the black
+     depths. Black & white are the key tones (the orca, the
+     ocean); the two blue-greys support UI nesting levels.
+     --------------------------------------------------------- */
+  --orca-white:        #ffffff;   /* surface · key colour · overall view   */
+  --orca-ocean:        #3a5f6d;   /* teal    · support    · 1st-level nest  */
+  --orca-depth:        #26333f;   /* slate   · support    · 2nd-level nest  */
+  --orca-black:        #000000;   /* depth   · key colour · detail view     */
+
+  /* ---------------------------------------------------------
+     2. ACCENTS — "action, not serene". Sparing & high-contrast.
+     --------------------------------------------------------- */
+  --accent-cyan:       #00c0e9;   /* neutral · primary CTA / interactive    */
+  --accent-green:      #00e9ba;   /* positive CTA / success                 */
+  --accent-yellow:     #feff80;   /* alert / caution                        */
+  --accent-red:        #e94200;   /* urgent / negative CTA / destructive    */
+
+  /* ---------------------------------------------------------
+     3. SIGNATURE BACKGROUND — vertical surface→depth gradient
+     --------------------------------------------------------- */
+  --orca-gradient: linear-gradient(180deg, #3a5f6d 0%, #26333f 48%, #000000 100%);
+  --orca-gradient-soft: linear-gradient(180deg, #3a5f6d 0%, #000000 100%);
+
+  /* ---------------------------------------------------------
+     4. TEXT ALPHA LEVELS
+     Hierarchy is built with opacity, not extra hues.
+     --------------------------------------------------------- */
+  --alpha-primary:   1;      /* headlines, key data    */
+  --alpha-secondary: 0.62;   /* supporting copy        */
+  --alpha-disabled:  0.34;   /* inactive / placeholder */
+
+  /* ON DARK (the default brand environment) */
+  --fg-on-dark-1: rgba(255,255,255,1);
+  --fg-on-dark-2: rgba(255,255,255,0.62);
+  --fg-on-dark-3: rgba(255,255,255,0.34);
+
+  /* ON LIGHT (the product app environment) */
+  --fg-on-light-1: rgba(38,51,63,1);     /* depth slate text  */
+  --fg-on-light-2: rgba(38,51,63,0.62);
+  --fg-on-light-3: rgba(38,51,63,0.34);
+
+  /* ---------------------------------------------------------
+     5. PRODUCT (APP) UI TOKENS — light environment
+     Derived from the ORCA app screens: white canvas, slate-
+     blue line icons & connectors, navy text, periwinkle
+     selection. The app is calm/light; the brand is dark.
+     --------------------------------------------------------- */
+  --app-canvas:        #ffffff;
+  --app-surface:       #ffffff;
+  --app-surface-sunken:#f5f7fa;   /* panels, sunken rows         */
+  --app-line:          #e3e8ef;   /* hairline borders            */
+  --app-line-strong:   #cfd8e3;
+  --app-ink:           #26333f;   /* primary text (depth slate)  */
+  --app-ink-2:         #5b6b7a;   /* secondary text              */
+  --app-ink-3:         #9aa7b4;   /* tertiary / placeholder      */
+  --app-slate:         #5d7793;   /* avatar fills, node accents  */
+  --app-slate-icon:    #6b83a8;   /* line-icon stroke colour     */
+  --app-connector:     #aab8c8;   /* structure-chart connectors  */
+  --app-select:        #c7d0e4;   /* selected node fill (periw.) */
+  --app-select-soft:   #eef1f8;   /* row hover / soft highlight  */
+  --app-primary:       #304AFF;   /* app primary button (blue)   */
+
+  /* ---------------------------------------------------------
+     6. TYPOGRAPHY
+     One family, two registers. Light/Regular = serene voice,
+     Bold = decisive moments. Geometric, generous spacing.
+     --------------------------------------------------------- */
+  --font-sans: 'Inter', 'Proxima Nova', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Inter Display', 'Inter', 'Proxima Nova', system-ui, sans-serif;
+
+  --weight-light:   300;   /* serenity — body, long-form        */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;   /* action — headlines, CTAs          */
+  --weight-black:   800;   /* the wordmark / hero moments        */
+
+  /* APP TEXT HIERARCHY (per brand spec) — px-locked */
+  --text-headline: 16px;   /* Headline 16 */
+  --text-title:    14px;   /* Title 14    */
+  --text-body:     12px;   /* Body 12     */
+  --text-small:    10px;   /* Small 10    */
+
+  --leading-tight: 1.15;
+  --leading-snug:  1.35;
+  --leading-body:  1.6;
+
+  /* Wordmark / spaced-caps treatment */
+  --tracking-wordmark: 0.42em;
+  --tracking-caps:     0.18em;
+  --tracking-label:    0.08em;
+
+  /* ---------------------------------------------------------
+     7. SHAPE — radii, elevation
+     Soft, calm corners; quiet shadows. Never harsh.
+     --------------------------------------------------------- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;    /* default card / node radius          */
+  --radius-lg: 16px;
+  --radius-pill: 999px; /* ownership %, badges, CTAs           */
+
+  --shadow-node:  0 1px 2px rgba(38,51,63,0.06), 0 4px 12px rgba(38,51,63,0.08);
+  --shadow-float: 0 8px 28px rgba(38,51,63,0.14);
+  --shadow-dark:  0 10px 40px rgba(0,0,0,0.45);
+
+  /* Protection scrim for text over photography */
+  --scrim-bottom: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);
+  --scrim-depth:  linear-gradient(180deg, rgba(38,51,63,0) 0%, rgba(0,0,0,0.7) 100%);
+
+  /* Motion — calm, deliberate. Ease-out, no bounce. */
+  --ease-serene: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.orca-wordmark {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  letter-spacing: var(--tracking-wordmark);
+  text-transform: uppercase;
+}
+.orca-display {            /* big brand statements              */
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: clamp(40px, 6vw, 88px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+.orca-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.005em;
+}
+.orca-h2 {
+  font-weight: var(--weight-bold);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: var(--leading-snug);
+}
+.orca-lede {              /* serene intro copy — light weight  */
+  font-weight: var(--weight-light);
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: var(--leading-body);
+}
+.orca-body {
+  font-weight: var(--weight-regular);
+  font-size: 16px;
+  line-height: var(--leading-body);
+}
+.orca-label {             /* spaced caps eyebrow               */
+  font-weight: var(--weight-semibold);
+  font-size: 12px;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+/* APP-scale semantic classes (px-locked hierarchy) */
+.app-headline { font-size: var(--text-headline); font-weight: var(--weight-bold);    line-height: 1.3; color: var(--app-ink); }
+.app-title    { font-size: var(--text-title);    font-weight: var(--weight-semibold);line-height: 1.3; color: var(--app-ink); }
+.app-body     { font-size: var(--text-body);     font-weight: var(--weight-regular); line-height: 1.45; color: var(--app-ink); }
+.app-small    { font-size: var(--text-small);    font-weight: var(--weight-medium);  line-height: 1.4; letter-spacing: 0.02em; color: var(--app-ink-2); }

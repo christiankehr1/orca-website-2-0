@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORCA — One document-backed source of truth for your structure</title>
+<meta name="description" content="If ownership lives across charts, spreadsheets, drives and people's heads, ORCA turns it into one document-backed source of truth you own — and share in seconds." />
+<link rel="stylesheet" href="colors_and_type.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<main>
+  <!-- ========================================================
+       Hero
+       ======================================================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__split">
+        <div>
+          <div class="eyebrow eyebrow--dark"><span class="rule"></span>The gap</div>
+          <h1 class="hero__title">Could someone new understand your structure tomorrow — without calling anyone?</h1>
+          <p class="orca-lede hero__lede">If ownership lives across charts, spreadsheets, drives and people's heads, the honest answer is no. ORCA turns it into one document-backed source of truth you own — and share in seconds.</p>
+          <div class="hero__cta">
+            <a href="book-demo.html" class="btn btn--primary btn--big">Book a demo <svg class="ic" width="17" height="17"><use href="#i-arrow"/></svg></a>
+            <a href="watch-demo.html" class="btn btn--ghost btn--big">Watch the 90-sec teaser <svg class="ic ic--fill" width="17" height="17"><use href="#i-play"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="ph ph--dark ph--video" style="min-height:300px">
+            <span class="ph__tag">video — placeholder</span>
+            <span class="ph__icon"><svg class="ic ic--fill" width="22" height="22"><use href="#i-play"/></svg></span>
+            <div>
+              <div class="ph__label">90-second teaser</div>
+              <div class="ph__sub">Poster frame + play. Video is a parallel workstream; instrument for drop-off.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- conversion ladder — all four rungs visible -->
+      <div class="hero__ladderwrap">
+        <div class="hero__ladderhead">
+          <span class="lbl">Four ways in — start anywhere</span>
+          <span class="line"></span>
+        </div>
+        <div class="ladder">
+          <a href="index.html#sonar" class="ladder__card card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic" width="16" height="16"><use href="#i-radar"/></svg></span><span class="ladder__n">01</span></div>
+            <div class="ladder__action">Experience it</div>
+            <div class="ladder__commit">Zero — no signup, ~30 sec</div>
+            <div class="ladder__go">Open <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+          <a href="watch-demo.html" class="ladder__card card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic ic--fill" width="16" height="16"><use href="#i-play"/></svg></span><span class="ladder__n">02</span></div>
+            <div class="ladder__action">Watch the teaser</div>
+            <div class="ladder__commit">Low — 90 seconds</div>
+            <div class="ladder__go">Open <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+          <a href="watch-demo.html#full" class="ladder__card card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic" width="16" height="16"><use href="#i-film"/></svg></span><span class="ladder__n">03</span></div>
+            <div class="ladder__action">Full demo video</div>
+            <div class="ladder__commit">Medium — ~30 min, self-serve</div>
+            <div class="ladder__go">Open <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+          <a href="book-demo.html" class="ladder__card goal card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic" width="16" height="16"><use href="#i-users"/></svg></span><span class="ladder__n">04</span></div>
+            <div class="ladder__action">Book a demo</div>
+            <div class="ladder__commit">High — 20 min, with a human</div>
+            <div class="ladder__go">Book now <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       Credibility strip
+       ======================================================== -->
+  <section class="cred">
+    <div class="wrap">
+      <div class="cred__cap">Trusted to hold the structures behind</div>
+      <div class="marquee">
+        <div class="marquee__track" id="marqueeTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       01 · The situation
+       ======================================================== -->
+  <section class="section section--sunken">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="rule"></span><span class="num">01 ·</span>The situation</div>
+        <h2 class="orca-h1">You run on four tools</h2>
+        <p class="orca-lede lede" style="max-width:720px">Structure charts, lists, documents and to-dos — four systems that are supposed to agree, kept in sync by hand. Not because anyone chose to. It's just how it grew.</p>
+      </div>
+      <div class="grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+        <div class="tool-card">
+          <span class="chip"><svg class="ic" width="20" height="20"><use href="#i-chart"/></svg></span>
+          <div class="name">Structure charts</div>
+          <div class="tool">PowerPoint / Visio</div>
+          <div class="crack"><svg class="ic" width="13" height="13"><use href="#i-x"/></svg> Last edited 7 months ago</div>
+        </div>
+        <div class="tool-card">
+          <span class="chip"><svg class="ic" width="20" height="20"><use href="#i-list"/></svg></span>
+          <div class="name">Lists &amp; data</div>
+          <div class="tool">Spreadsheets</div>
+          <div class="crack"><svg class="ic" width="13" height="13"><use href="#i-x"/></svg> Three versions in the folder</div>
+        </div>
+        <div class="tool-card">
+          <span class="chip"><svg class="ic" width="20" height="20"><use href="#i-folder"/></svg></span>
+          <div class="name">Documents</div>
+          <div class="tool">Drives &amp; email</div>
+          <div class="crack"><svg class="ic" width="13" height="13"><use href="#i-x"/></svg> “It's in here somewhere”</div>
+        </div>
+        <div class="tool-card">
+          <span class="chip"><svg class="ic" width="20" height="20"><use href="#i-todo"/></svg></span>
+          <div class="name">To-dos</div>
+          <div class="tool">Heads &amp; inboxes</div>
+          <div class="crack"><svg class="ic" width="13" height="13"><use href="#i-x"/></svg> Only Maria knows that</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       02 · The hidden cost
+       ======================================================== -->
+  <section class="section section--gradient section--pad104">
+    <div class="wrap">
+      <div class="section-head section-head--dark">
+        <div class="eyebrow eyebrow--dark"><span class="rule"></span><span class="num">02 ·</span>The hidden cost</div>
+        <h2 class="orca-h1">Four tools means four versions of the truth</h2>
+        <p class="orca-lede lede" style="max-width:720px">The inefficiency is invisible — a thousand small cuts. Until the chart and the list disagree in front of a client.</p>
+      </div>
+      <div class="grid-2" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+        <div class="vignette"><div class="mark">“</div><div class="q">The chart's updated — the list isn't.</div><div class="who">Every quarter-end</div></div>
+        <div class="vignette"><div class="mark">“</div><div class="q">It's in here somewhere…</div><div class="who">Looking for the signed version</div></div>
+        <div class="vignette"><div class="mark">“</div><div class="q">Only Maria knows that.</div><div class="who">And Maria is on leave</div></div>
+        <div class="vignette"><div class="mark">“</div><div class="q">Was that a loan or equity?</div><div class="who">Nobody's quite sure</div></div>
+      </div>
+      <div class="stat-band">
+        <div class="num">#1</div>
+        <div class="body">
+          <div class="t">Key-person turnover is the top internal threat to entity management.</div>
+          <div class="src">Source: Dentons survey</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       03 · The reframe
+       ======================================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <div class="eyebrow" style="justify-content:center"><span class="rule"></span><span class="num">03 ·</span>The reframe</div>
+        <h2 class="orca-h1">The fix isn't a better chart. It's one source of truth.</h2>
+        <p class="orca-lede lede" style="max-width:680px">Four tools collapse into one ORCA. Enter the facts once — or let ORCA extract them from your documents — and every view stays right.</p>
+      </div>
+      <div class="reframe">
+        <div class="reframe__pills">
+          <div class="reframe__pill"><svg class="ic" width="15" height="15"><use href="#i-chart"/></svg> Structure charts</div>
+          <div class="reframe__pill"><svg class="ic" width="15" height="15"><use href="#i-list"/></svg> Lists &amp; data</div>
+          <div class="reframe__pill"><svg class="ic" width="15" height="15"><use href="#i-folder"/></svg> Documents</div>
+          <div class="reframe__pill"><svg class="ic" width="15" height="15"><use href="#i-todo"/></svg> To-dos</div>
+        </div>
+        <svg class="ic" width="30" height="30" style="color:var(--app-slate-icon)"><use href="#i-arrow"/></svg>
+        <div class="reframe__orca">
+          <img src="assets/orca-symbol-white.png" alt="" />
+          <span class="orca-wordmark">ORCA</span>
+          <span class="sub">One source of truth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       04 · See it happen — Sonar walkthrough
+       ======================================================== -->
+  <section class="section section--sunken section--pad104" id="sonar">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="rule"></span><span class="num">04 ·</span>See it happen</div>
+        <h2 class="orca-h1">Watch a shareholders' agreement become a structure chart</h2>
+        <p class="orca-lede lede" style="max-width:720px">Experience it, don't just see it. Four steps — every fact traced back to the document it came from.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="chip"><svg class="ic" width="13" height="13"><use href="#i-upload"/></svg></span>Upload</div>
+        <svg class="ic" width="16" height="16" style="color:var(--app-ink-3)"><use href="#i-arrow"/></svg>
+        <div class="step"><span class="chip"><svg class="ic" width="13" height="13"><use href="#i-radar"/></svg></span>Extract</div>
+        <svg class="ic" width="16" height="16" style="color:var(--app-ink-3)"><use href="#i-arrow"/></svg>
+        <div class="step"><span class="chip"><svg class="ic" width="13" height="13"><use href="#i-merge"/></svg></span>Reconcile</div>
+        <svg class="ic" width="16" height="16" style="color:var(--app-ink-3)"><use href="#i-arrow"/></svg>
+        <div class="step"><span class="chip"><svg class="ic" width="13" height="13"><use href="#i-chart"/></svg></span>Chart</div>
+      </div>
+      <div class="browser">
+        <div class="browser__bar">
+          <span class="browser__dot" style="background:#e0808a"></span>
+          <span class="browser__dot" style="background:#e8c98a"></span>
+          <span class="browser__dot" style="background:#9fd7b0"></span>
+          <div class="browser__url">app.withorca.com/sonar</div>
+        </div>
+        <div class="embed" data-base="1440" data-ratio="0.66">
+          <iframe src="demos/sonar-demo/interactive-sonar.html" title="ORCA Sonar — interactive walkthrough" loading="lazy" scrolling="no"></iframe>
+        </div>
+      </div>
+      <div class="sonar-note">
+        <svg class="ic" width="16" height="16" style="color:var(--accent-cyan)"><use href="#i-check"/></svg> Every data point traces back to its source document.
+      </div>
+      <div class="sonar-cta">
+        <a href="book-demo.html" class="btn btn--primary btn--big">See this on your own documents <svg class="ic" width="17" height="17"><use href="#i-arrow"/></svg></a>
+        <a href="watch-demo.html#full" class="text-link">Prefer to watch? See the full demo <svg class="ic" width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       05 · Proof
+       ======================================================== -->
+  <section class="section section--gradient section--pad100">
+    <div class="wrap">
+      <div class="section-head section-head--dark">
+        <div class="eyebrow eyebrow--dark"><span class="rule"></span><span class="num">05 ·</span>Proof</div>
+        <h2 class="orca-h1">Real structures. Real numbers.</h2>
+        <p class="orca-lede lede" style="max-width:720px">Most of the value is clarity and peace of mind — hard to put a single number on. Where numbers are real, here they are.</p>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="num">85%</div><div class="lbl">less admin time</div><div class="src">Billingsley</div></div>
+        <div class="metric"><div class="num">3–4 wks → 1</div><div class="lbl">onboarding a new structure</div><div class="src">PE client</div></div>
+        <div class="metric"><div class="num">&lt; 1 hr</div><div class="lbl">to answer an auditor</div><div class="src">Mt Vernon</div></div>
+        <div class="metric"><div class="num">28+</div><div class="lbl">countries on one map</div><div class="src">Operating co.</div></div>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <div class="q">“We stopped maintaining the chart by hand. It just stays right now.”</div>
+          <div class="by"><span class="av"></span><div><div class="who">Head of Family Office</div><div class="seg">Family Office</div></div></div>
+        </div>
+        <div class="quote">
+          <div class="q">“Onboarding a new fund used to take a month. Now the structure's live in days.”</div>
+          <div class="by"><span class="av"></span><div><div class="who">Operations, Fifth Partners</div><div class="seg">PE &amp; Investment</div></div></div>
+        </div>
+        <div class="quote">
+          <div class="q">“When the auditor calls, the answer is already on screen — with the document behind it.”</div>
+          <div class="by"><span class="av"></span><div><div class="who">Group Counsel</div><div class="seg">Operating company</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       06 · Where do you fit?
+       ======================================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="rule"></span><span class="num">06 ·</span>Where do you fit?</div>
+        <h2 class="orca-h1">Now you've seen it — find your structure</h2>
+        <p class="orca-lede lede" style="max-width:720px">Four ways ORCA shows up. Pick the one that sounds like you, or browse the full set.</p>
+      </div>
+      <div class="grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+        <a href="segment.html" class="seg-card card-hover">
+          <span class="chip"><svg class="ic" width="21" height="21"><use href="#i-users"/></svg></span>
+          <div class="name">Family Offices</div>
+          <div class="line">Beneficial owners, trusts, succession — privately.</div>
+          <span class="go">See ORCA for you <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="solutions.html#pe" class="seg-card card-hover">
+          <span class="chip"><svg class="ic" width="21" height="21"><use href="#i-trend"/></svg></span>
+          <div class="name">PE &amp; Investment</div>
+          <div class="line">Every fund, SPV and holding on one map.</div>
+          <span class="go">See ORCA for you <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="solutions.html#re" class="seg-card card-hover">
+          <span class="chip"><svg class="ic" width="21" height="21"><use href="#i-building"/></svg></span>
+          <div class="name">Real Estate</div>
+          <div class="line">Property-holding structures, always current.</div>
+          <span class="go">See ORCA for you <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="solutions.html#corp" class="seg-card card-hover">
+          <span class="chip"><svg class="ic" width="21" height="21"><use href="#i-landmark"/></svg></span>
+          <div class="name">Operating Companies</div>
+          <div class="line">Every subsidiary and shareholding, live.</div>
+          <span class="go">See ORCA for you <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+      <div class="seg-all">
+        <a href="solutions.html">Or see all solutions — by who you are, or by need <svg class="ic" width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       Final CTA
+       ======================================================== -->
+  <section class="section section--gradient">
+    <div class="wrap">
+      <div class="final">
+        <div class="eyebrow eyebrow--dark"><span class="rule"></span>Pick your next step</div>
+        <h2 class="orca-h1">You've seen the problem. Now see ORCA on your structure.</h2>
+        <p class="orca-lede lede">Start anywhere on the ladder. Booking sends a 2-minute survey and a short video to watch first — so the call starts tailored to you.</p>
+        <div class="final__cta">
+          <a href="book-demo.html" class="btn btn--primary btn--big">Book a demo <svg class="ic" width="17" height="17"><use href="#i-arrow"/></svg></a>
+          <a href="watch-demo.html" class="btn btn--ghost btn--big">Watch a demo <svg class="ic ic--fill" width="17" height="17"><use href="#i-play"/></svg></a>
+        </div>
+      </div>
+      <div class="final__ladder">
+        <div class="ladder ladder--compact">
+          <a href="index.html#sonar" class="ladder__card card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic" width="16" height="16"><use href="#i-radar"/></svg></span><span class="ladder__n">01</span></div>
+            <div class="ladder__action">Experience it</div>
+            <div class="ladder__commit">Zero — no signup, ~30 sec</div>
+            <div class="ladder__go">Open <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+          <a href="watch-demo.html" class="ladder__card card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic ic--fill" width="16" height="16"><use href="#i-play"/></svg></span><span class="ladder__n">02</span></div>
+            <div class="ladder__action">Watch the teaser</div>
+            <div class="ladder__commit">Low — 90 seconds</div>
+            <div class="ladder__go">Open <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+          <a href="watch-demo.html#full" class="ladder__card card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic" width="16" height="16"><use href="#i-film"/></svg></span><span class="ladder__n">03</span></div>
+            <div class="ladder__action">Full demo video</div>
+            <div class="ladder__commit">Medium — ~30 min, self-serve</div>
+            <div class="ladder__go">Open <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+          <a href="book-demo.html" class="ladder__card goal card-hover">
+            <div class="ladder__top"><span class="ladder__chip"><svg class="ic" width="16" height="16"><use href="#i-users"/></svg></span><span class="ladder__n">04</span></div>
+            <div class="ladder__action">Book a demo</div>
+            <div class="ladder__commit">High — 20 min, with a human</div>
+            <div class="ladder__go">Book now <svg class="ic" width="13" height="13"><use href="#i-arrow"/></svg></div>
+          </a>
+        </div>
+      </div>
+      <div class="final__signoff">Less admin. More business.</div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="chrome.js"></script>
+<script>
+  // Credibility marquee — duplicate the client list for a seamless loop
+  (function () {
+    var clients = ["Billingsley", "Mt Vernon", "Fifth Partners", "Mary Kay", "Aderton", "Lakefront FO", "Northcape", "Veritas Trust"];
+    var track = document.getElementById('marqueeTrack');
+    var row = clients.concat(clients);
+    track.innerHTML = row.map(function (n) {
+      return '<div class="marquee__item">' +
+        '<span class="marquee__sq"><svg class="ic" width="12" height="12"><use href="#i-image"/></svg></span>' +
+        '<span class="marquee__name">' + n + '</span></div>';
+    }).join('');
+  })();
+</script>
+
+</body>
+</html>

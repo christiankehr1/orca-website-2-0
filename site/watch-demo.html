@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORCA — Watch a demo: in 90 seconds, or in full</title>
+<meta name="description" content="Not ready to book? Watch first. Start with the teaser, then go as deep as you like — chapter by chapter, at your own pace." />
+<link rel="stylesheet" href="colors_and_type.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<main>
+  <!-- hero + teaser -->
+  <section class="phero--dark">
+    <div class="wrap" style="padding:76px 40px 64px">
+      <div class="hero__split" style="grid-template-columns:0.9fr 1.1fr">
+        <div>
+          <div class="eyebrow eyebrow--dark"><span class="rule"></span>Watch a demo</div>
+          <h1 class="page-h1" style="font-size:clamp(30px,3.8vw,50px)">See it work — in 90 seconds, or in full</h1>
+          <p class="orca-lede" style="color:var(--fg-on-dark-2);margin:18px 0 0;max-width:460px">Not ready to book? Watch first. Start with the teaser, then go as deep as you like — chapter by chapter, at your own pace.</p>
+          <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+            <a href="#full" class="btn btn--primary btn--big">Jump to the full demo <svg class="ic" width="17" height="17"><use href="#i-arrowDown"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="ph ph--dark ph--video" style="min-height:320px">
+            <span class="ph__tag">video — placeholder</span>
+            <span class="ph__icon"><svg class="ic ic--fill" width="22" height="22"><use href="#i-play"/></svg></span>
+            <div><div class="ph__label">90-second teaser</div><div class="ph__sub">Poster + play. Instrument completion &amp; drop-off (e.g. Vimeo).</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- full chaptered demo -->
+  <section class="section section--sunken" id="full" style="padding:84px 0;scroll-margin-top:70px">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="rule"></span>The full demo · ~30 min</div>
+        <h2 class="orca-h1">Watch the whole thing — or just your chapter</h2>
+        <p class="orca-lede lede">Chaptered so you can self-navigate. Pick up wherever matters most to you.</p>
+      </div>
+      <div class="watch-split">
+        <div>
+          <div class="browser">
+            <div class="browser__bar">
+              <span class="browser__dot" style="background:#e0808a"></span>
+              <span class="browser__dot" style="background:#e8c98a"></span>
+              <span class="browser__dot" style="background:#9fd7b0"></span>
+              <div class="browser__url">withorca.com/watch</div>
+            </div>
+            <div class="ph ph--video" style="min-height:340px;border:0;border-radius:0">
+              <span class="ph__tag" id="vidTag">chapter 1 — placeholder</span>
+              <span class="ph__icon"><svg class="ic ic--fill" width="22" height="22"><use href="#i-play"/></svg></span>
+              <div><div class="ph__label" id="vidLabel">Full demo — Onboarding &amp; Sonar</div><div class="ph__sub" id="vidSub">From a pile of documents to a first structure.</div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="chapters__label">Chapters</div>
+          <div class="chapters" id="chapters">
+            <button class="chapter on" data-i="0" data-t="Onboarding &amp; Sonar" data-d="From a pile of documents to a first structure.">
+              <span class="chapter__num"><svg class="ic ic--fill" width="12" height="12"><use href="#i-play"/></svg></span>
+              <span class="chapter__main"><span class="chapter__row"><span class="chapter__t">Onboarding &amp; Sonar</span><span class="chapter__len">6:20</span></span><span class="chapter__d">From a pile of documents to a first structure.</span></span>
+            </button>
+            <button class="chapter" data-i="1" data-t="Structure charts" data-d="The chart that draws itself; time-travel.">
+              <span class="chapter__num">2</span>
+              <span class="chapter__main"><span class="chapter__row"><span class="chapter__t">Structure charts</span><span class="chapter__len">5:10</span></span><span class="chapter__d">The chart that draws itself; time-travel.</span></span>
+            </button>
+            <button class="chapter" data-i="2" data-t="Documents &amp; Smart Folders" data-d="Filed once, findable everywhere.">
+              <span class="chapter__num">3</span>
+              <span class="chapter__main"><span class="chapter__row"><span class="chapter__t">Documents &amp; Smart Folders</span><span class="chapter__len">4:45</span></span><span class="chapter__d">Filed once, findable everywhere.</span></span>
+            </button>
+            <button class="chapter" data-i="3" data-t="Sharing &amp; collaboration" data-d="Share fast, stay safe — you keep control.">
+              <span class="chapter__num">4</span>
+              <span class="chapter__main"><span class="chapter__row"><span class="chapter__t">Sharing &amp; collaboration</span><span class="chapter__len">3:55</span></span><span class="chapter__d">Share fast, stay safe — you keep control.</span></span>
+            </button>
+            <button class="chapter" data-i="4" data-t="Security &amp; compliance" data-d="Zero-knowledge, completeness checks, KYC.">
+              <span class="chapter__num">5</span>
+              <span class="chapter__main"><span class="chapter__row"><span class="chapter__t">Security &amp; compliance</span><span class="chapter__len">5:30</span></span><span class="chapter__d">Zero-knowledge, completeness checks, KYC.</span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- closing CTA -->
+  <section class="section section--gradient" style="padding:80px 0">
+    <div class="wrap">
+      <div class="cta-center">
+        <h2 class="orca-h1">Ready for the real thing?</h2>
+        <p class="orca-lede lede">Book a demo and we'll run it on your own structure.</p>
+        <div class="cta-center__btns">
+          <a href="book-demo.html" class="btn btn--primary btn--big">Book a demo <svg class="ic" width="17" height="17"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="chrome.js"></script>
+<script>
+  // chapter switcher
+  (function () {
+    var chapters = [].slice.call(document.querySelectorAll('.chapter'));
+    var tag = document.getElementById('vidTag');
+    var label = document.getElementById('vidLabel');
+    var sub = document.getElementById('vidSub');
+    chapters.forEach(function (c) {
+      c.addEventListener('click', function () {
+        chapters.forEach(function (x, i) {
+          x.classList.remove('on');
+          x.querySelector('.chapter__num').innerHTML = String(i + 1);
+        });
+        c.classList.add('on');
+        c.querySelector('.chapter__num').innerHTML = '<svg class="ic ic--fill" width="12" height="12"><use href="#i-play"/></svg>';
+        var i = c.dataset.i;
+        label.innerHTML = 'Full demo — ' + c.dataset.t;
+        sub.innerHTML = c.dataset.d;
+        tag.textContent = 'chapter ' + (parseInt(i, 10) + 1) + ' — placeholder';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

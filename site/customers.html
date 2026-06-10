@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORCA — Customers: structures that stay true</title>
+<meta name="description" content="Where the numbers are real, here they are. Filter by the kind of structure you run." />
+<link rel="stylesheet" href="colors_and_type.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<main>
+  <!-- intro -->
+  <section class="section" style="padding:72px 0">
+    <div class="wrap">
+      <div style="max-width:760px">
+        <div class="eyebrow"><span class="rule"></span>Customers</div>
+        <h1 class="page-h1" style="font-size:clamp(32px,4vw,52px)">Structures that stay true</h1>
+        <p class="orca-lede" style="color:var(--app-ink-2);margin:18px 0 0;max-width:580px">Most of the value is clarity and calm — hard to reduce to a number. Where the numbers are real, here they are. Filter by the kind of structure you run.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- filterable grid -->
+  <section class="section section--sunken" style="padding:64px 0">
+    <div class="wrap">
+      <div class="filters" id="filters">
+        <svg class="ic" width="16" height="16"><use href="#i-filter"/></svg>
+        <button class="chip-btn on" data-filter="All">All</button>
+        <button class="chip-btn" data-filter="Family Office">Family Office</button>
+        <button class="chip-btn" data-filter="PE &amp; Investment">PE &amp; Investment</button>
+        <button class="chip-btn" data-filter="Real Estate">Real Estate</button>
+        <button class="chip-btn" data-filter="Operating company">Operating company</button>
+        <button class="chip-btn" data-filter="Law &amp; Trust">Law &amp; Trust</button>
+      </div>
+      <div class="stories" id="stories">
+        <div class="story" data-seg="Operating company">
+          <div class="story__top"><span class="story__logo"><span class="story__sq"><svg class="ic" width="13" height="13"><use href="#i-image"/></svg></span><span class="story__name">Billingsley</span></span><span class="story__seg">Operating company</span></div>
+          <div class="story__metric"><span class="n">85%</span><span class="l">less admin time</span></div>
+          <p class="story__quote">“The group structure maintains itself now. Closing the books got quietly faster.”</p>
+          <div class="story__role">Group Finance</div>
+        </div>
+        <div class="story" data-seg="PE &amp; Investment">
+          <div class="story__top"><span class="story__logo"><span class="story__sq"><svg class="ic" width="13" height="13"><use href="#i-image"/></svg></span><span class="story__name">Fifth Partners</span></span><span class="story__seg">PE &amp; Investment</span></div>
+          <div class="story__metric"><span class="n">3–4 wks → 1</span><span class="l">to onboard a new fund</span></div>
+          <p class="story__quote">“Onboarding a fund used to take a month of back-and-forth. Now the structure's live in days.”</p>
+          <div class="story__role">Operations</div>
+        </div>
+        <div class="story" data-seg="Operating company">
+          <div class="story__top"><span class="story__logo"><span class="story__sq"><svg class="ic" width="13" height="13"><use href="#i-image"/></svg></span><span class="story__name">Mary Kay</span></span><span class="story__seg">Operating company</span></div>
+          <div class="story__metric"><span class="n">28+</span><span class="l">countries on one map</span></div>
+          <p class="story__quote">“Every subsidiary, every jurisdiction — finally on one screen we trust.”</p>
+          <div class="story__role">Group Legal</div>
+        </div>
+        <div class="story" data-seg="Real Estate">
+          <div class="story__top"><span class="story__logo"><span class="story__sq"><svg class="ic" width="13" height="13"><use href="#i-image"/></svg></span><span class="story__name">Mt Vernon</span></span><span class="story__seg">Real Estate</span></div>
+          <div class="story__metric"><span class="n">&lt; 1 hr</span><span class="l">to answer an auditor</span></div>
+          <p class="story__quote">“When the auditor calls, the answer is on screen — with the document behind it.”</p>
+          <div class="story__role">Asset Management</div>
+        </div>
+        <div class="story" data-seg="Family Office">
+          <div class="story__top"><span class="story__logo"><span class="story__sq"><svg class="ic" width="13" height="13"><use href="#i-image"/></svg></span><span class="story__name">Lakefront FO</span></span><span class="story__seg">Family Office</span></div>
+          <div class="story__metric"><span class="n">0</span><span class="l">charts maintained by hand</span></div>
+          <p class="story__quote">“We stopped redrawing the chart. It just stays right.”</p>
+          <div class="story__role">Head of Family Office</div>
+        </div>
+        <div class="story" data-seg="Law &amp; Trust">
+          <div class="story__top"><span class="story__logo"><span class="story__sq"><svg class="ic" width="13" height="13"><use href="#i-image"/></svg></span><span class="story__name">Veritas Trust</span></span><span class="story__seg">Law &amp; Trust</span></div>
+          <div class="story__metric"><span class="n">100s</span><span class="l">client structures, one system</span></div>
+          <p class="story__quote">“Hundreds of client structures, each private, each current. That used to be impossible.”</p>
+          <div class="story__role">Managing Partner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- closing CTA -->
+  <section class="section section--gradient" style="padding:88px 0">
+    <div class="wrap">
+      <div class="cta-center">
+        <h2 class="orca-h1">Your structure could be the next one that stays true</h2>
+        <div class="cta-center__btns">
+          <a href="book-demo.html" class="btn btn--primary btn--big">Book a demo <svg class="ic" width="17" height="17"><use href="#i-arrow"/></svg></a>
+          <a href="watch-demo.html" class="btn btn--ghost btn--big">Watch a demo <svg class="ic ic--fill" width="17" height="17"><use href="#i-play"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="chrome.js"></script>
+<script>
+  // segment filter
+  (function () {
+    var btns = [].slice.call(document.querySelectorAll('.chip-btn'));
+    var cards = [].slice.call(document.querySelectorAll('.story'));
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        btns.forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on');
+        var f = b.dataset.filter;
+        cards.forEach(function (c) {
+          c.style.display = (f === 'All' || c.dataset.seg === f) ? '' : 'none';
+        });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

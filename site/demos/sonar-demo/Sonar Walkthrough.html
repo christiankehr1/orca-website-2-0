@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ORCA — Sonar · 30-second walkthrough</title>
+<link rel="stylesheet" href="colors_and_type.css" />
+<style>
+  html, body { margin: 0; height: 100%; background: #000; font-family: var(--font-sans); color: var(--app-ink); }
+  #root { position: fixed; inset: 0; }
+  * { -webkit-font-smoothing: antialiased; box-sizing: border-box; }
+  button { font-family: var(--font-sans); }
+
+  @keyframes cardPop { from { opacity: 0; transform: translateY(5px) scale(.985); } to { opacity: 1; transform: none; } }
+  @keyframes ripple { from { transform: scale(.5); opacity: .85; } to { transform: scale(1.7); opacity: 0; } }
+  @keyframes markIn { from { background-color: rgba(0,192,233,.5); } to {} }
+  @keyframes sonarPing { 0% { transform: scale(.5); opacity: .7; } 80% { opacity: 0; } 100% { transform: scale(2.6); opacity: 0; } }
+  @keyframes dotPulse { 0%, 100% { opacity: .25; transform: scale(.8); } 50% { opacity: 1; transform: scale(1); } }
+
+  /* sound-unlock hint (sits above the stage, in viewport space) */
+  #soundHint { position: fixed; top: 18px; right: 18px; z-index: 9999;
+    display: inline-flex; align-items: center; gap: 9px; padding: 10px 15px;
+    background: rgba(12,17,22,.86); color: #fff; border: 1px solid rgba(255,255,255,.14);
+    border-radius: 999px; font: 600 13.5px var(--font-sans); letter-spacing: .01em;
+    cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,.4); backdrop-filter: blur(6px);
+    transition: opacity .2s, transform .2s; }
+  #soundHint:hover { transform: translateY(-1px); }
+  #soundHint .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--accent-cyan);
+    box-shadow: 0 0 12px 2px rgba(0,192,233,.6); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<button id="soundHint"><span class="dot"></span>Click for sound</button>
+<audio id="narration" preload="auto"></audio>
+
+<template id="__bundler_thumbnail" data-bg-color="#26333f">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#26333f"/>
+    <g fill="none" stroke="#00c0e9" stroke-width="2.4">
+      <path d="M50 50 a14 14 0 0 1 14 -14" />
+      <path d="M50 50 a24 24 0 0 1 24 -24" opacity=".6" />
+      <path d="M50 50 a34 34 0 0 1 34 -34" opacity=".3" />
+    </g>
+    <circle cx="50" cy="50" r="4" fill="#00c0e9"/>
+    <rect x="20" y="60" width="36" height="5" rx="2.5" fill="#fff" opacity=".85"/>
+    <rect x="20" y="71" width="26" height="5" rx="2.5" fill="#fff" opacity=".5"/>
+  </svg>
+</template>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+<!-- narration sync: plays narration.mp3 if present, after a user gesture -->
+<script>
+  (function () {
+    var a = document.getElementById('narration');
+    var hint = document.getElementById('soundHint');
+    window.__narration = a;
+    window.__audioUnlocked = false;
+    function hideHint() { if (hint) hint.style.display = 'none'; }
+    a.addEventListener('canplay', function () { window.__audioReady = true; });
+    a.addEventListener('error', function () { a.__missing = true; hideHint(); });
+    // Load the track only after a user gesture — avoids a 404 console error
+    // before narration.mp3 has been added, and satisfies browser autoplay rules.
+    function unlock() {
+      window.removeEventListener('pointerdown', unlock);
+      window.removeEventListener('keydown', unlock);
+      window.__audioUnlocked = true;
+      if (!a.src) a.src = 'narration.mp3';
+      a.play().then(hideHint).catch(function () { /* missing/blocked → just keep captions */ hideHint(); });
+    }
+    if (hint) hint.addEventListener('click', unlock);
+    window.addEventListener('pointerdown', unlock);
+    window.addEventListener('keydown', unlock);
+  })();
+</script>
+
+<script src="sample-docs.js"></script>
+<script src="logos.js"></script>
+
+<script type="text/babel" src="primitives.jsx"></script>
+<script type="text/babel" src="Sidebar.jsx"></script>
+<script type="text/babel" src="DropZone.jsx"></script>
+<script type="text/babel" src="DocViewer.jsx"></script>
+<script type="text/babel" src="ReviewPanel.jsx"></script>
+<script type="text/babel" src="browser-window.jsx"></script>
+<script type="text/babel" src="animations.jsx"></script>
+<script type="text/babel" src="VideoScene.jsx"></script>
+</body>
+</html>

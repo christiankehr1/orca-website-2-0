@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORCA — Book a demo: see ORCA on your own structure</title>
+<meta name="description" content="Twenty minutes, with someone who knows entity management. Tell us a little now and the call starts tailored to you — no generic walkthrough." />
+<link rel="stylesheet" href="colors_and_type.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<main>
+  <!-- intro -->
+  <section class="section" style="padding:64px 0">
+    <div class="wrap">
+      <div style="max-width:720px">
+        <div class="eyebrow"><span class="rule"></span>Book a demo</div>
+        <h1 class="page-h1" style="font-size:clamp(30px,3.8vw,50px)">See ORCA on your own structure</h1>
+        <p class="orca-lede" style="color:var(--app-ink-2);margin:18px 0 0;max-width:560px">Twenty minutes, with someone who knows entity management. Tell us a little now and the call starts tailored to you — no generic walkthrough.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sunken" style="padding:72px 0">
+    <div class="wrap">
+      <div class="book-split">
+        <!-- the flow -->
+        <div>
+          <div class="orca-label" style="color:var(--app-slate-icon);margin-bottom:20px">How it works</div>
+          <div class="flow">
+            <div class="flow__step">
+              <div class="flow__rail"><span class="flow__chip"><svg class="ic" width="19" height="19"><use href="#i-users"/></svg></span><span class="flow__line"></span></div>
+              <div class="flow__body"><div class="flow__n">STEP 1</div><div class="flow__t">Book</div><div class="flow__d">Pick a time that works. 20 minutes, with a human.</div></div>
+            </div>
+            <div class="flow__step">
+              <div class="flow__rail"><span class="flow__chip"><svg class="ic" width="19" height="19"><use href="#i-list"/></svg></span><span class="flow__line"></span></div>
+              <div class="flow__body"><div class="flow__n">STEP 2</div><div class="flow__t">Get a 2-min survey</div><div class="flow__d">A few questions so we come prepared.</div></div>
+            </div>
+            <div class="flow__step">
+              <div class="flow__rail"><span class="flow__chip"><svg class="ic ic--fill" width="17" height="17"><use href="#i-play"/></svg></span><span class="flow__line"></span></div>
+              <div class="flow__body"><div class="flow__n">STEP 3</div><div class="flow__t">Watch a short video first</div><div class="flow__d">We send a tailored clip to watch before we meet.</div></div>
+            </div>
+            <div class="flow__step">
+              <div class="flow__rail"><span class="flow__chip"><svg class="ic" width="19" height="19"><use href="#i-radar"/></svg></span></div>
+              <div class="flow__body"><div class="flow__n">STEP 4</div><div class="flow__t">We dive into your questions</div><div class="flow__d">The call starts where you are — not at slide one.</div></div>
+            </div>
+          </div>
+          <div class="book-assure">
+            <svg class="ic" width="16" height="16"><use href="#i-shield"/></svg>
+            <span>You'll leave with clarity and a concrete next step — not a hard ROI figure. No pricing pressure on the call.</span>
+          </div>
+        </div>
+
+        <!-- booking card -->
+        <div class="book-card">
+          <div class="book-card__title">Tell us about your structure</div>
+          <div class="book-card__sub">The three questions from our survey — moved up front.</div>
+          <form class="book-form" onsubmit="return false">
+            <div class="field"><label>I am a…</label>
+              <div class="chips" data-group="seg">
+                <button type="button" class="chip-btn">Family Office</button>
+                <button type="button" class="chip-btn">PE &amp; Investment</button>
+                <button type="button" class="chip-btn">Real Estate</button>
+                <button type="button" class="chip-btn">Operating company</button>
+                <button type="button" class="chip-btn">Law &amp; Trust</button>
+                <button type="button" class="chip-btn">Advisor</button>
+                <button type="button" class="chip-btn">Other</button>
+              </div>
+            </div>
+            <div class="field"><label>How many entities do you manage?</label>
+              <div class="chips" data-group="ent">
+                <button type="button" class="chip-btn">1–10</button>
+                <button type="button" class="chip-btn">11–50</button>
+                <button type="button" class="chip-btn">51–200</button>
+                <button type="button" class="chip-btn">200+</button>
+              </div>
+            </div>
+            <div class="field"><label>What do you use today?</label>
+              <div class="chips" data-group="tool">
+                <button type="button" class="chip-btn">PowerPoint / Visio</button>
+                <button type="button" class="chip-btn">Spreadsheets</button>
+                <button type="button" class="chip-btn">A database tool</button>
+                <button type="button" class="chip-btn">Another platform</button>
+                <button type="button" class="chip-btn">Nothing yet</button>
+              </div>
+            </div>
+            <div class="book-divider"></div>
+            <div class="field"><label>Pick a time</label>
+              <!-- SavvyCal inline booking embed (link: withorca/demo) -->
+              <div id="booking-page" class="savvycal-embed"></div>
+            </div>
+            <div class="book-fine">Swiss data centres · 256-bit encryption · we never share your details.</div>
+          </form>
+        </div>
+      </div>
+      <div class="book-signoff">Less admin. More business.</div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="chrome.js"></script>
+
+<!-- SavvyCal booking embed -->
+<script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)};</script>
+<script async src="https://embed.savvycal.com/v1/embed.js"></script>
+<script>
+  SavvyCal('init');
+  SavvyCal('inline', { link: 'withorca/demo', selector: '#booking-page' });
+</script>
+
+<script>
+  // single-select chip groups
+  (function () {
+    var groups = [].slice.call(document.querySelectorAll('.chips[data-group]'));
+    groups.forEach(function (g) {
+      var btns = [].slice.call(g.querySelectorAll('.chip-btn'));
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          btns.forEach(function (x) { x.classList.remove('on'); });
+          b.classList.add('on');
+        });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
