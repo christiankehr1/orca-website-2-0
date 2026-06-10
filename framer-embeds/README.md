@@ -64,30 +64,20 @@ Repeat per page. File → Framer page mapping:
   That's what makes each file ~1.3 MB; it's a one-time paste.
 - **SavvyCal** (on `book-demo.html`) loads live from savvycal.com — works as-is.
 
-## Wiring the two live demos (optional, one step)
+## Live demos — DONE ✅
 
 The Sonar walkthrough (`index.html`) and the structure chart (`platform.html`, `segment.html`)
-are shown as **placeholders** in these files, because the demos are multi-file / 3.4 MB and
-can't be inlined. To make them live:
+are **live** in these files, embedded from GitHub Pages:
 
-1. Host the `site/demos/` folder anywhere static (your domain, Netlify, Vercel, GitHub Pages).
-   Call that base URL `HOST` (e.g. `https://assets.withorca.com`).
-2. In the embed HTML, find the placeholder block (`<div class="ph"> … Interactive Sonar
-   walkthrough … </div>` or `… Live structure chart …`) and replace it with:
+- Host: **https://christiankehr1.github.io/orca-website-2-0/** (repo `christiankehr1/orca-website-2-0`,
+  auto-deployed from `site/` by `.github/workflows/pages.yml` on every push to `main`).
+- GitHub Pages sends no `X-Frame-Options` / `frame-ancestors`, so the iframes embed anywhere
+  (Framer included). These three embeds therefore need a network connection at view time.
 
-   **Sonar (index.html):**
-   ```html
-   <div class="embed" data-base="1440" data-ratio="0.66">
-     <iframe src="HOST/demos/sonar-demo/interactive-sonar.html" title="ORCA Sonar" loading="lazy" scrolling="no"></iframe>
-   </div>
-   ```
+To regenerate after changing a demo, push to `main` (Pages redeploys) and run:
 
-   **Structure chart (platform.html, segment.html):**
-   ```html
-   <div class="embed" data-base="1456" data-ratio="0.62">
-     <iframe src="HOST/demos/structure-chart.html" title="ORCA structure chart" loading="lazy" scrolling="no"></iframe>
-   </div>
-   ```
+```bash
+DEMO_BASE="https://christiankehr1.github.io/orca-website-2-0" node build-framer-embeds.js
+```
 
-   The inlined `chrome.js` already scales these to fit (its `wireEmbeds()` runs automatically).
-   Tell me your `HOST` and I'll bake the live demos straight into the generated files.
+Omit `DEMO_BASE` to fall back to placeholders (e.g. for a fully offline build).
