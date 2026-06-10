@@ -71,6 +71,10 @@ for (const name of pages) {
     .split('<link rel="stylesheet" href="colors_and_type.css" />').join(`<style>\n${combinedCss}\n</style>`)
     .split('<link rel="stylesheet" href="styles.css" />').join("");
 
+  // strip favicon links — pointless inside an iframe embed, and would leave
+  // unresolved relative refs (the page itself lives on GitHub Pages with favicons)
+  html = html.replace(/[ \t]*<link rel="(?:icon|apple-touch-icon)"[^>]*\/?>\n?/g, "");
+
   // inline chrome.js
   html = html.split('<script src="chrome.js"></script>').join(`<script>\n${chrome}\n</script>`);
 
