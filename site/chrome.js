@@ -120,6 +120,11 @@
         '</div>' +
         '<button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">' + ic('menu', 20) + '</button>' +
       '</div>' +
+    '</header>';
+
+  // Mobile menu lives OUTSIDE the header: the header has backdrop-filter, which
+  // would otherwise trap this position:fixed panel and collapse it to content height.
+  var MOBILE_MENU =
       '<div class="mobile-menu" id="mobileMenu"><div class="wrap">' +
         mobileSec('Platform', [
           ['The engine', [['platform.html#engine','radar','Document-to-truth'],['platform.html#consolidate','layers','Consolidate'],['platform.html#reconcile','check','Reconcile &amp; check'],['platform.html#share','share','Share &amp; collaborate']]],
@@ -139,8 +144,7 @@
           '<a href="book-demo.html" class="btn btn--primary btn--big">Book a demo ' + ic('arrow', 17) + '</a>' +
           '<a href="#" class="login">Log in →</a>' +
         '</div>' +
-      '</div></div>' +
-    '</header>';
+      '</div></div>';
 
   function megaItem(href, icon, label, blurb, fill) {
     return '<a href="' + href + '" class="mega-item"><span class="chip">' + ic(icon, 15, fill ? 'ic--fill' : '') + '</span>' +
@@ -193,6 +197,9 @@
     var footSlot = document.getElementById('site-footer');
     if (navSlot) navSlot.outerHTML = NAV;
     if (footSlot) footSlot.outerHTML = FOOTER;
+
+    // mobile menu appended to body (not inside the backdrop-filtered header)
+    document.body.insertAdjacentHTML('beforeend', MOBILE_MENU);
 
     wireEmbeds();
 
