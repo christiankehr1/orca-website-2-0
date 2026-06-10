@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://christiankehr1.github.io/orca-website-2-0/sitemap.xml
