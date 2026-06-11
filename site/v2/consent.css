@@ -1,0 +1,85 @@
+/* ============================================================
+   ORCA v2 — Cookie consent banner
+   ============================================================ */
+
+.cc{
+  position:fixed;z-index:90;
+  right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);
+  width:min(420px,calc(100vw - 32px));
+  background:var(--depth);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:26px 26px 22px;
+  box-shadow:0 24px 60px rgba(4,7,10,.55);
+  opacity:0;transform:translateY(12px);
+  transition:opacity .4s var(--ease),transform .4s var(--ease);
+}
+.cc.is-visible{opacity:1;transform:translateY(0)}
+.cc.is-leaving{opacity:0;transform:translateY(8px);pointer-events:none}
+
+.cc__title{
+  font-family:var(--font-display);font-weight:600;
+  font-size:17px;color:var(--fg-1);margin-bottom:10px;
+}
+.cc__text{font-size:13.5px;color:var(--fg-2);line-height:1.55;margin-bottom:18px}
+.cc__text a{color:var(--cyan);border-bottom:1px solid transparent;transition:border-color .25s}
+.cc__text a:hover{border-color:var(--cyan)}
+
+.cc__actions{display:flex;gap:10px;flex-wrap:wrap}
+.cc__btn{
+  flex:1 1 auto;
+  font-family:var(--font-display);font-weight:600;font-size:13.5px;
+  border-radius:999px;padding:11px 18px;
+  border:1px solid var(--line);
+  background:transparent;color:var(--fg-1);
+  cursor:pointer;white-space:nowrap;
+  transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease);
+}
+.cc__btn:hover{background:rgba(244,247,248,.08)}
+/* Accept and Reject get equal visual weight — a GDPR requirement */
+.cc__btn--accept{background:var(--cyan);border-color:var(--cyan);color:var(--black)}
+.cc__btn--accept:hover{background:var(--white);border-color:var(--white)}
+.cc__btn--reject{border-color:rgba(244,247,248,.4)}
+.cc__btn:focus-visible,.cc__switch input:focus-visible + .cc__track{
+  outline:2px solid var(--cyan);outline-offset:2px;
+}
+
+/* ---- Customize view ---- */
+.cc__cats{margin:0 0 18px;max-height:46vh;overflow-y:auto}
+.cc__cat{
+  display:grid;grid-template-columns:1fr auto;gap:2px 14px;
+  padding:13px 0;border-top:1px solid var(--line);
+}
+.cc__cat:first-child{border-top:0}
+.cc__cat-name{grid-column:1;grid-row:1;font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--fg-1)}
+.cc__cat-desc{grid-column:1;grid-row:2;font-size:12.5px;color:var(--fg-2);line-height:1.5}
+
+.cc__switch{grid-column:2;grid-row:1 / span 2;align-self:center;position:relative;display:inline-block}
+.cc__switch input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.cc__track{
+  display:block;width:44px;height:24px;border-radius:999px;
+  background:rgba(244,247,248,.18);
+  transition:background .3s var(--ease);pointer-events:none;
+}
+.cc__track::after{
+  content:"";position:absolute;top:3px;left:3px;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--white);
+  transition:transform .3s var(--ease);
+}
+.cc__switch input:checked + .cc__track{background:var(--cyan)}
+.cc__switch input:checked + .cc__track::after{transform:translateX(20px)}
+.cc__switch input:disabled{cursor:not-allowed}
+.cc__switch input:disabled + .cc__track{opacity:.55}
+
+/* Footer "Cookie settings" trigger */
+.footer__links button[data-consent-open]{
+  background:none;border:0;padding:0;font:inherit;cursor:pointer;
+  color:var(--fg-2);transition:color .25s;
+}
+.footer__links button[data-consent-open]:hover{color:var(--cyan)}
+
+@media (max-width:480px){
+  .cc{right:16px;left:16px;width:auto}
+  .cc__actions{flex-direction:column-reverse}
+}
