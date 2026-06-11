@@ -160,9 +160,62 @@ em{font-style:normal;color:var(--cyan)}
   transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease);
 }
 .nav__cta:hover{background:var(--cyan);border-color:var(--cyan);color:var(--black)}
+
+/* ---------------- Mobile menu ---------------- */
+.nav__burger{
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  width:40px;height:40px;flex-shrink:0;
+  background:none;border:1px solid var(--line);border-radius:50%;
+  cursor:pointer;padding:0;
+}
+.nav__burger span{
+  display:block;width:15px;height:1.5px;background:var(--fg-1);
+  transition:transform .3s var(--ease);
+}
+.nav__burger.is-open span:nth-child(1){transform:translateY(3.25px) rotate(45deg)}
+.nav__burger.is-open span:nth-child(2){transform:translateY(-3.25px) rotate(-45deg)}
+
+.mnav{
+  position:fixed;inset:0;z-index:49;display:none;
+  background:rgba(4,7,10,.97);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  opacity:0;visibility:hidden;
+  transition:opacity .35s var(--ease),visibility 0s linear .35s;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:84px var(--pad) 48px;
+}
+.mnav.is-open{opacity:1;visibility:visible;transition:opacity .35s var(--ease),visibility 0s}
+html.mnav-lock,html.mnav-lock body{overflow:hidden}
+.mnav__sec{border-bottom:1px solid var(--line)}
+.mnav__sec summary{
+  display:flex;align-items:center;justify-content:space-between;
+  list-style:none;cursor:pointer;padding:18px 0;
+  font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--fg-1);
+}
+.mnav__sec summary::-webkit-details-marker{display:none}
+.mnav__sec summary svg{color:var(--fg-3);transition:transform .3s var(--ease)}
+.mnav__sec[open] summary svg{transform:rotate(180deg)}
+.mnav__links{display:flex;flex-direction:column;padding:0 0 18px}
+.mnav__links .h{
+  font-family:var(--font-display);font-size:10px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--fg-3);
+  margin:14px 0 6px;
+}
+.mnav__links .h:first-child{margin-top:0}
+.mnav__links a{padding:9px 0;font-size:15px;color:var(--fg-2);transition:color .25s}
+.mnav__links a:active,.mnav__links a:hover{color:var(--cyan)}
+.mnav__flat{
+  display:block;padding:18px 0;border-bottom:1px solid var(--line);
+  font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--fg-1);
+}
+.mnav__cta{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.mnav__cta .btn{justify-content:center}
+
 @media (max-width:860px){
   .nav__links,.nav__meta{display:none}
   .nav{justify-content:space-between}
+  .nav__burger{display:flex}
+  .mnav{display:block}
 }
 
 /* ---------------- Buttons ---------------- */
