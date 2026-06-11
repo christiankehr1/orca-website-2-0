@@ -56,7 +56,7 @@
   <section class="section section--sunken" id="full" style="padding:84px 0;scroll-margin-top:70px">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow"><span class="rule"></span>The full demo · ~30 min</div>
+        <div class="eyebrow"><span class="rule"></span>The full demo · 4 min</div>
         <h2 class="orca-h1">Watch the whole thing — or just your chapter</h2>
         <p class="orca-lede lede">Chaptered so you can self-navigate. Pick up wherever matters most to you.</p>
       </div>
@@ -69,11 +69,11 @@
               <span class="browser__dot" style="background:#9fd7b0"></span>
               <div class="browser__url">withorca.com/watch</div>
             </div>
-            <div class="ph ph--video" style="min-height:340px;border:0;border-radius:0">
-              <span class="ph__tag" id="vidTag">chapter 1 — placeholder</span>
-              <span class="ph__icon"><svg class="ic ic--fill" width="22" height="22"><use href="#i-play"/></svg></span>
-              <div><div class="ph__label" id="vidLabel">Full demo — Onboarding &amp; Sonar</div><div class="ph__sub" id="vidSub">From a pile of documents to a first structure.</div></div>
-            </div>
+            <button class="video-poster" id="demoPoster" type="button" aria-haspopup="dialog" aria-label="Play the full demo — Introducing ORCA, 3 minutes 57 seconds">
+              <img class="video-poster__img" src="assets/demo-full-poster.jpg" alt="" width="1280" height="719" loading="lazy" />
+              <span class="video-poster__play"><svg class="ic ic--fill" width="24" height="24"><use href="#i-play"/></svg></span>
+              <span class="video-poster__meta"><span class="video-poster__t">Introducing ORCA — the full demo</span><span class="video-poster__len">3:57</span></span>
+            </button>
           </div>
         </div>
         <div>
@@ -121,14 +121,17 @@
 
 <div id="site-footer"></div>
 
+<!-- theater-mode video overlay -->
+<div class="theater" id="theater" role="dialog" aria-modal="true" aria-label="Introducing ORCA — full demo video" hidden>
+  <button class="theater__close" id="theaterClose" type="button">Close <svg class="ic" width="15" height="15"><use href="#i-x"/></svg></button>
+  <div class="theater__stage" id="theaterStage"></div>
+</div>
+
 <script src="chrome.js"></script>
 <script>
   // chapter switcher
   (function () {
     var chapters = [].slice.call(document.querySelectorAll('.chapter'));
-    var tag = document.getElementById('vidTag');
-    var label = document.getElementById('vidLabel');
-    var sub = document.getElementById('vidSub');
     chapters.forEach(function (c) {
       c.addEventListener('click', function () {
         chapters.forEach(function (x, i) {
@@ -137,11 +140,44 @@
         });
         c.classList.add('on');
         c.querySelector('.chapter__num').innerHTML = '<svg class="ic ic--fill" width="12" height="12"><use href="#i-play"/></svg>';
-        var i = c.dataset.i;
-        label.innerHTML = 'Full demo — ' + c.dataset.t;
-        sub.innerHTML = c.dataset.d;
-        tag.textContent = 'chapter ' + (parseInt(i, 10) + 1) + ' — placeholder';
       });
+    });
+  })();
+
+  // theater-mode player (Vimeo)
+  (function () {
+    var theater = document.getElementById('theater');
+    var stage = document.getElementById('theaterStage');
+    var poster = document.getElementById('demoPoster');
+    var closeBtn = document.getElementById('theaterClose');
+    var VIMEO_SRC = 'https://player.vimeo.com/video/882914194?autoplay=1&byline=0&title=0&portrait=0&dnt=1';
+
+    function open() {
+      var iframe = document.createElement('iframe');
+      iframe.className = 'theater__frame';
+      iframe.src = VIMEO_SRC;
+      iframe.title = 'Introducing ORCA — full demo';
+      iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; encrypted-media');
+      iframe.setAttribute('allowfullscreen', '');
+      stage.appendChild(iframe);
+      theater.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+      document.addEventListener('keydown', onKey);
+    }
+    function close() {
+      theater.hidden = true;
+      stage.innerHTML = ''; // remove iframe to stop playback
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+      poster.focus();
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+
+    poster.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    theater.addEventListener('click', function (e) {
+      if (e.target === theater || e.target === stage) close(); // backdrop click
     });
   })();
 </script>
