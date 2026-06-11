@@ -104,7 +104,63 @@
     <span class="nav__time" id="clock">—:—:—</span>
   </div>
   <a href="../book-demo.html" class="nav__cta" data-cursor="link" data-magnetic>Book a demo</a>
+  <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span>
+  </button>
 </header>
+
+<!-- Mobile menu (sibling of the header so no ancestor effect can trap it) -->
+<div class="mnav" id="mobileMenu">
+  <nav class="mnav__inner" aria-label="Mobile">
+    <details class="mnav__sec">
+      <summary>Platform <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="mnav__links">
+        <span class="h">The engine</span>
+        <a href="../platform.html#engine">Document-to-truth</a>
+        <a href="../platform.html#consolidate">Consolidate</a>
+        <a href="../platform.html#reconcile">Reconcile &amp; check</a>
+        <a href="../platform.html#share">Share &amp; collaborate</a>
+        <span class="h">Experience it</span>
+        <a href="#sonar">Interactive Sonar</a>
+        <a href="../watch-demo.html">Watch a demo</a>
+        <a href="../platform.html#levels">The 4 Levels</a>
+      </div>
+    </details>
+    <details class="mnav__sec">
+      <summary>Solutions <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="mnav__links">
+        <span class="h">By who you are</span>
+        <a href="../segment.html">Family Offices</a>
+        <a href="../solutions.html#pe">PE &amp; Investment</a>
+        <a href="../solutions.html#re">Real Estate</a>
+        <a href="../solutions.html#corp">Operating Companies</a>
+        <span class="h">Also serving</span>
+        <a href="../solutions.html#law">Law &amp; Trust Firms</a>
+        <a href="../solutions.html#advisors">Advisors &amp; Wealth</a>
+        <span class="h">By need</span>
+        <a href="../solutions.html#by-need">Structure charts</a>
+        <a href="../solutions.html#by-need">KYC / AML</a>
+        <a href="../solutions.html#by-need">Succession</a>
+        <a href="../solutions.html#by-need">Exit &amp; due diligence</a>
+        <a href="../solutions.html#by-need">Document management</a>
+      </div>
+    </details>
+    <a class="mnav__flat" href="../customers.html">Customers</a>
+    <details class="mnav__sec">
+      <summary>Why ORCA <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="mnav__links">
+        <a href="../why-orca.html#moat">Document-to-truth moat</a>
+        <a href="../why-orca.html#own">Own your information</a>
+        <a href="../why-orca.html#security">Security &amp; privacy</a>
+        <a href="../why-orca.html#compare">vs. the alternatives</a>
+      </div>
+    </details>
+    <div class="mnav__cta">
+      <a href="../book-demo.html" class="btn btn--primary btn--big">Book a demo <span class="btn__arrow">→</span></a>
+      <a href="../watch-demo.html" class="btn btn--ghost btn--big">Watch a demo ▶</a>
+    </div>
+  </nav>
+</div>
 
 <main id="top">
 

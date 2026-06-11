@@ -329,3 +329,30 @@
     }
   }
 })();
+
+/* ============================================================
+   Mobile menu toggle
+   ============================================================ */
+(function () {
+  'use strict';
+  var burger = document.getElementById('navBurger');
+  var menu = document.getElementById('mobileMenu');
+  if (!burger || !menu) return;
+
+  function setMenu(open) {
+    menu.classList.toggle('is-open', open);
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.documentElement.classList.toggle('mnav-lock', open);
+  }
+
+  burger.addEventListener('click', function () {
+    setMenu(!menu.classList.contains('is-open'));
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { setMenu(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setMenu(false);
+  });
+})();
