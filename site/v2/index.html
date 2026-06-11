@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORCA — One document-backed source of truth for your structure</title>
+<meta name="description" content="If ownership lives across charts, spreadsheets, drives and people's heads, ORCA turns it into one document-backed source of truth you own — and share in seconds." />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="../favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="stylesheet" href="v2.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="loader" id="loader">
+  <div class="loader__count" id="loaderCount">0</div>
+  <div class="loader__bar"><span id="loaderBar"></span></div>
+  <div class="loader__tag">ORCA — One source of truth</div>
+</div>
+
+<!-- Custom cursor (desktop only) -->
+<div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+
+<!-- Nav -->
+<header class="nav" id="navbar">
+  <a href="#top" class="nav__logo" data-cursor="link">
+    <img src="../assets/orca-symbol-white.png" alt="" width="26" height="26" />
+    <span class="orca-wordmark">ORCA</span>
+  </a>
+  <nav class="nav__links">
+    <a href="../platform.html" data-cursor="link">Platform</a>
+    <a href="../solutions.html" data-cursor="link">Solutions</a>
+    <a href="../customers.html" data-cursor="link">Customers</a>
+    <a href="../why-orca.html" data-cursor="link">Why ORCA</a>
+  </nav>
+  <div class="nav__meta">
+    <span class="nav__city">Zurich</span>
+    <span class="nav__time" id="clock">—:—:—</span>
+  </div>
+  <a href="../book-demo.html" class="nav__cta" data-cursor="link" data-magnetic>Book a demo</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <p class="hero__eyebrow" data-reveal>The gap</p>
+      <h1 class="hero__title" aria-label="One source of truth">
+        <span class="hero__line"><span class="split" data-split>ONE SOURCE</span></span>
+        <span class="hero__line hero__line--offset"><span class="split split--outline" data-split>OF TRUTH</span></span>
+      </h1>
+      <div class="hero__row">
+        <div>
+          <p class="hero__lede" data-reveal><strong>Could someone new understand your structure tomorrow — without calling anyone?</strong> If ownership lives across charts, spreadsheets, drives and people’s heads, the honest answer is no. ORCA turns it into one <em>document-backed source of truth</em> you own — and share in seconds.</p>
+          <div class="hero__cta" data-reveal>
+            <a href="../book-demo.html" class="btn btn--primary" data-cursor="link" data-magnetic>Book a demo <span class="btn__arrow">→</span></a>
+            <a href="../watch-demo.html" class="btn btn--ghost" data-cursor="link" data-magnetic>Watch the 90-sec teaser ▶</a>
+          </div>
+        </div>
+        <div class="hero__meta" data-reveal>
+          <span>Document-backed</span>
+          <span>Owned by you</span>
+          <span>Shared in seconds</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll" data-reveal>
+      <span class="hero__scrolldot"></span> Scroll to dive
+    </div>
+  </section>
+
+  <!-- ============ CLIENT MARQUEE ============ -->
+  <div class="cred">
+    <p class="cred__cap">Trusted to hold the structures behind</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__inner" id="marquee">
+        <span>Billingsley ◦ Mt Vernon ◦ Fifth Partners ◦ Mary Kay ◦ Aderton ◦ Lakefront FO ◦ Northcape ◦ Veritas Trust ◦&nbsp;</span>
+        <span>Billingsley ◦ Mt Vernon ◦ Fifth Partners ◦ Mary Kay ◦ Aderton ◦ Lakefront FO ◦ Northcape ◦ Veritas Trust ◦&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 01 · THE SITUATION ============ -->
+  <section class="situation" id="situation">
+    <div class="section-head">
+      <span class="section-head__label" data-reveal>01 — The situation</span>
+      <h2 class="section-head__title" data-reveal>You run on<br/>four tools.</h2>
+      <p class="section-head__lede" data-reveal>Structure charts, lists, documents and to-dos — four systems that are supposed to agree, kept in sync by hand. Not because anyone chose to. It’s just how it grew.</p>
+    </div>
+    <div class="tools">
+      <div class="tool" data-reveal>
+        <span class="tool__chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="9" y="3" width="6" height="5" rx="1.2"/><rect x="3" y="16" width="6" height="5" rx="1.2"/><rect x="15" y="16" width="6" height="5" rx="1.2"/><path d="M12 8v4m0 0H6v4m6-4h6v4"/></svg>
+        </span>
+        <h3 class="tool__name">Structure charts</h3>
+        <p class="tool__app">PowerPoint / Visio</p>
+        <p class="tool__crack">✕ Last edited 7 months ago</p>
+      </div>
+      <div class="tool" data-reveal>
+        <span class="tool__chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <h3 class="tool__name">Lists &amp; data</h3>
+        <p class="tool__app">Spreadsheets</p>
+        <p class="tool__crack">✕ Three versions in the folder</p>
+      </div>
+      <div class="tool" data-reveal>
+        <span class="tool__chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+        </span>
+        <h3 class="tool__name">Documents</h3>
+        <p class="tool__app">Drives &amp; email</p>
+        <p class="tool__crack">✕ “It’s in here somewhere”</p>
+      </div>
+      <div class="tool" data-reveal>
+        <span class="tool__chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg>
+        </span>
+        <h3 class="tool__name">To-dos</h3>
+        <p class="tool__app">Heads &amp; inboxes</p>
+        <p class="tool__crack">✕ Only Maria knows that</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · THE HIDDEN COST ============ -->
+  <section class="cost" id="cost">
+    <div class="section-head">
+      <span class="section-head__label" data-reveal>02 — The hidden cost</span>
+      <h2 class="section-head__title" data-reveal>Four tools means four<br/>versions of the truth.</h2>
+      <p class="section-head__lede" data-reveal>The inefficiency is invisible — a thousand small cuts. Until the chart and the list disagree in front of a client.</p>
+    </div>
+    <div class="vignettes">
+      <figure class="vig" data-reveal><blockquote>“The chart’s updated — the list isn’t.”</blockquote><figcaption>Every quarter-end</figcaption></figure>
+      <figure class="vig" data-reveal><blockquote>“It’s in here somewhere…”</blockquote><figcaption>Looking for the signed version</figcaption></figure>
+      <figure class="vig" data-reveal><blockquote>“Only Maria knows that.”</blockquote><figcaption>And Maria is on leave</figcaption></figure>
+      <figure class="vig" data-reveal><blockquote>“Was that a loan or equity?”</blockquote><figcaption>Nobody’s quite sure</figcaption></figure>
+    </div>
+    <div class="statband" data-reveal>
+      <span class="statband__num">#1</span>
+      <div class="statband__body">
+        <p class="statband__t">Key-person turnover is the top internal threat to entity management.</p>
+        <p class="statband__src">Source: Dentons survey</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · THE REFRAME ============ -->
+  <section class="reframe" id="reframe">
+    <div class="section-head section-head--center">
+      <span class="section-head__label" data-reveal>03 — The reframe</span>
+      <h2 class="section-head__title" data-reveal>The fix isn’t a better chart.<br/>It’s one source of truth.</h2>
+      <p class="section-head__lede" data-reveal>Four tools collapse into one ORCA. Enter the facts once — or let ORCA extract them from your documents — and every view stays right.</p>
+    </div>
+    <div class="reframe__stage">
+      <div class="reframe__pills">
+        <span class="pill" data-pill>Structure charts</span>
+        <span class="pill" data-pill>Lists &amp; data</span>
+        <span class="pill" data-pill>Documents</span>
+        <span class="pill" data-pill>To-dos</span>
+      </div>
+      <span class="reframe__arrow" aria-hidden="true">→</span>
+      <div class="reframe__orca" data-reveal>
+        <img src="../assets/orca-symbol-white.png" alt="" width="44" height="44" />
+        <span class="orca-wordmark reframe__wordmark">ORCA</span>
+        <span class="reframe__sub">One source of truth</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · SEE IT HAPPEN ============ -->
+  <section class="sonar" id="sonar">
+    <div class="section-head">
+      <span class="section-head__label" data-reveal>04 — See it happen</span>
+      <h2 class="section-head__title" data-reveal>Watch a shareholders’ agreement<br/>become a structure chart.</h2>
+      <p class="section-head__lede" data-reveal>Experience it, don’t just see it. Four steps — every fact traced back to the document it came from.</p>
+    </div>
+    <div class="steps" data-reveal>
+      <span class="step">Upload</span><span class="steps__sep">→</span>
+      <span class="step">Extract</span><span class="steps__sep">→</span>
+      <span class="step">Reconcile</span><span class="steps__sep">→</span>
+      <span class="step">Chart</span>
+    </div>
+    <div class="browser" data-reveal>
+      <div class="browser__bar">
+        <span class="browser__dot" style="background:#e0808a"></span>
+        <span class="browser__dot" style="background:#e8c98a"></span>
+        <span class="browser__dot" style="background:#9fd7b0"></span>
+        <span class="browser__url">app.withorca.com/sonar</span>
+      </div>
+      <div class="embed" id="sonarEmbed">
+        <iframe src="../demos/sonar-demo/interactive-sonar.html" title="ORCA Sonar — interactive walkthrough" loading="lazy" scrolling="no"></iframe>
+      </div>
+    </div>
+    <p class="sonar__note" data-reveal>✓ Every data point traces back to its source document.</p>
+    <div class="sonar__cta" data-reveal>
+      <a href="../book-demo.html" class="btn btn--primary" data-cursor="link" data-magnetic>See this on your own documents <span class="btn__arrow">→</span></a>
+      <a href="../watch-demo.html#full" class="textlink" data-cursor="link">Prefer to watch? See the full demo →</a>
+    </div>
+  </section>
+
+  <!-- ============ 05 · PROOF ============ -->
+  <section class="proof" id="proof">
+    <div class="section-head">
+      <span class="section-head__label" data-reveal>05 — Proof</span>
+      <h2 class="section-head__title" data-reveal>Real structures.<br/>Real numbers.</h2>
+      <p class="section-head__lede" data-reveal>Most of the value is clarity and peace of mind — hard to put a single number on. Where numbers are real, here they are.</p>
+    </div>
+    <div class="metrics">
+      <div class="metric" data-reveal><span class="metric__num"><span data-count="85">0</span>%</span><span class="metric__lbl">less admin time</span><span class="metric__src">Billingsley</span></div>
+      <div class="metric" data-reveal><span class="metric__num">3–4 wks → 1</span><span class="metric__lbl">onboarding a new structure</span><span class="metric__src">PE client</span></div>
+      <div class="metric" data-reveal><span class="metric__num">&lt; 1 hr</span><span class="metric__lbl">to answer an auditor</span><span class="metric__src">Mt Vernon</span></div>
+      <div class="metric" data-reveal><span class="metric__num"><span data-count="28">0</span>+</span><span class="metric__lbl">countries on one map</span><span class="metric__src">Operating co.</span></div>
+    </div>
+    <div class="quotes">
+      <figure class="quotecard" data-reveal>
+        <blockquote>“We stopped maintaining the chart by hand. It just stays right now.”</blockquote>
+        <figcaption><strong>Head of Family Office</strong><span>Family Office</span></figcaption>
+      </figure>
+      <figure class="quotecard" data-reveal>
+        <blockquote>“Onboarding a new fund used to take a month. Now the structure’s live in days.”</blockquote>
+        <figcaption><strong>Operations, Fifth Partners</strong><span>PE &amp; Investment</span></figcaption>
+      </figure>
+      <figure class="quotecard" data-reveal>
+        <blockquote>“When the auditor calls, the answer is already on screen — with the document behind it.”</blockquote>
+        <figcaption><strong>Group Counsel</strong><span>Operating company</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 06 · WHERE DO YOU FIT ============ -->
+  <section class="fit" id="fit">
+    <div class="section-head">
+      <span class="section-head__label" data-reveal>06 — Where do you fit?</span>
+      <h2 class="section-head__title" data-reveal>Now you’ve seen it —<br/>find your structure.</h2>
+      <p class="section-head__lede" data-reveal>Four ways ORCA shows up. Pick the one that sounds like you, or browse the full set.</p>
+    </div>
+    <ul class="seg">
+      <li><a class="seg__row" href="../segment.html" data-cursor="view">
+        <span class="seg__n">/01</span>
+        <span class="seg__name">Family Offices</span>
+        <span class="seg__desc">Beneficial owners, trusts, succession — privately.</span>
+        <span class="seg__go">→</span>
+      </a></li>
+      <li><a class="seg__row" href="../solutions.html#pe" data-cursor="view">
+        <span class="seg__n">/02</span>
+        <span class="seg__name">PE &amp; Investment</span>
+        <span class="seg__desc">Every fund, SPV and holding on one map.</span>
+        <span class="seg__go">→</span>
+      </a></li>
+      <li><a class="seg__row" href="../solutions.html#re" data-cursor="view">
+        <span class="seg__n">/03</span>
+        <span class="seg__name">Real Estate</span>
+        <span class="seg__desc">Property-holding structures, always current.</span>
+        <span class="seg__go">→</span>
+      </a></li>
+      <li><a class="seg__row" href="../solutions.html#corp" data-cursor="view">
+        <span class="seg__n">/04</span>
+        <span class="seg__name">Operating Companies</span>
+        <span class="seg__desc">Every subsidiary and shareholding, live.</span>
+        <span class="seg__go">→</span>
+      </a></li>
+    </ul>
+    <p class="seg__all" data-reveal><a href="../solutions.html" class="textlink" data-cursor="link">Or see all solutions — by who you are, or by need →</a></p>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final" id="final">
+    <span class="section-head__label" data-reveal>Pick your next step</span>
+    <h2 class="final__title">
+      <span class="hero__line"><span class="split" data-split>SEE ORCA</span></span>
+      <span class="hero__line"><span class="split split--outline" data-split>ON YOURS</span></span>
+    </h2>
+    <p class="final__lede" data-reveal>You’ve seen the problem. Start anywhere on the ladder — booking sends a 2-minute survey and a short video first, so the call starts tailored to you.</p>
+    <div class="final__cta" data-reveal>
+      <a href="../book-demo.html" class="btn btn--primary btn--big" data-cursor="link" data-magnetic>Book a demo <span class="btn__arrow">→</span></a>
+      <a href="../watch-demo.html" class="btn btn--ghost btn--big" data-cursor="link" data-magnetic>Watch a demo ▶</a>
+    </div>
+    <div class="ladder">
+      <a href="#sonar" class="ladder__card" data-reveal data-cursor="link">
+        <span class="ladder__n">01</span>
+        <span class="ladder__action">Experience it</span>
+        <span class="ladder__commit">Zero — no signup, ~30 sec</span>
+      </a>
+      <a href="../watch-demo.html" class="ladder__card" data-reveal data-cursor="link">
+        <span class="ladder__n">02</span>
+        <span class="ladder__action">Watch the teaser</span>
+        <span class="ladder__commit">Low — 90 seconds</span>
+      </a>
+      <a href="../watch-demo.html#full" class="ladder__card" data-reveal data-cursor="link">
+        <span class="ladder__n">03</span>
+        <span class="ladder__action">Full demo video</span>
+        <span class="ladder__commit">Medium — ~30 min, self-serve</span>
+      </a>
+      <a href="../book-demo.html" class="ladder__card ladder__card--goal" data-reveal data-cursor="link">
+        <span class="ladder__n">04</span>
+        <span class="ladder__action">Book a demo</span>
+        <span class="ladder__commit">High — 20 min, with a human</span>
+      </a>
+    </div>
+    <p class="final__signoff" data-reveal>Less admin. More business.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© 2026 ORCA</span>
+  <div class="footer__links">
+    <a href="../platform.html" data-cursor="link">Platform</a>
+    <a href="../solutions.html" data-cursor="link">Solutions</a>
+    <a href="../customers.html" data-cursor="link">Customers</a>
+    <a href="../why-orca.html" data-cursor="link">Why ORCA</a>
+  </div>
+  <span class="footer__sig">Made in Zurich ◦ swims daily</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="v2.js"></script>
+</body>
+</html>
