@@ -32,13 +32,13 @@ const combinedCss = tokens + "\n\n" + styles;
 
 /* 2 — logo PNGs as base64 */
 const dataPng = (p) => `data:image/png;base64,${fs.readFileSync(p).toString("base64")}`;
-const logoBlack = dataPng(path.join(SITE, "assets/orca-symbol-black.png"));
-const logoWhite = dataPng(path.join(SITE, "assets/orca-symbol-white.png"));
+const logoBlack = dataPng(path.join(SITE, "assets/orca-logo-black.png"));
+const logoWhite = dataPng(path.join(SITE, "assets/orca-logo-white.png"));
 
 /* 3 — chrome.js with logos inlined */
 let chrome = fs.readFileSync(path.join(SITE, "chrome.js"), "utf8")
-  .split("assets/orca-symbol-black.png").join(logoBlack)
-  .split("assets/orca-symbol-white.png").join(logoWhite);
+  .split("assets/orca-logo-black.png").join(logoBlack)
+  .split("assets/orca-logo-white.png").join(logoWhite);
 
 /* 4 — live-demo embeds.
    If DEMO_BASE is set (e.g. DEMO_BASE=https://user.github.io/repo node build-framer-embeds.js),
@@ -79,8 +79,8 @@ for (const name of pages) {
   html = html.split('<script src="chrome.js"></script>').join(`<script>\n${chrome}\n</script>`);
 
   // inline logos referenced directly in page bodies
-  html = html.split("assets/orca-symbol-black.png").join(logoBlack)
-             .split("assets/orca-symbol-white.png").join(logoWhite);
+  html = html.split("assets/orca-logo-black.png").join(logoBlack)
+             .split("assets/orca-logo-white.png").join(logoWhite);
 
   // demo embeds: live (if DEMO_BASE) or styled placeholder
   html = html.replace(/<div class="embed"[\s\S]*?<\/iframe>\s*<\/div>/g, handleDemo);

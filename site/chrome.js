@@ -50,7 +50,7 @@
   var NAV =
     '<header class="nav">' +
       '<div class="wrap nav__bar">' +
-        '<a href="index.html" class="nav__brand"><img src="assets/orca-symbol-black.png" alt="ORCA" /><span class="orca-wordmark">ORCA</span></a>' +
+        '<a href="index.html" class="nav__brand"><img src="assets/orca-logo-black.png" alt="ORCA" /></a>' +
         '<nav class="nav__menu">' +
           /* Platform */
           '<div class="nav__item"><a href="platform.html">Platform ' + ic('chevron', 13, 'chev') + '</a>' +
@@ -152,7 +152,7 @@
       (blurb ? '<span class="blurb">' + blurb + '</span>' : '') + '</span></a>';
   }
   function megaFeature(href, title, body, cta) {
-    return '<a href="' + href + '" class="mega__feature card-hover"><img src="assets/orca-symbol-white.png" alt="" />' +
+    return '<a href="' + href + '" class="mega__feature card-hover"><img src="assets/orca-logo-white.png" alt="" />' +
       '<div class="ft-title">' + title + '</div><div class="ft-body">' + body + '</div>' +
       '<span class="ft-cta">' + cta + ' ' + ic('arrow', 13) + '</span></a>';
   }
@@ -169,7 +169,7 @@
   var FOOTER =
     '<footer class="footer">' +
       '<div class="wrap footer__grid">' +
-        '<div><div class="footer__brand"><img src="assets/orca-symbol-white.png" alt="" /><span class="orca-wordmark">ORCA</span></div>' +
+        '<div><div class="footer__brand"><img src="assets/orca-logo-white.png" alt="ORCA" /></div>' +
           '<div class="footer__blurb">The easiest, fastest, most intelligent and secure way to store, manage, analyze and share your legal information.</div>' +
           '<div class="footer__tag">#getorcanized ;)</div></div>' +
         footCol('Platform', [['platform.html','Document-to-truth'],['platform.html','Consolidate'],['platform.html','Reconcile &amp; check'],['platform.html','Share &amp; collaborate'],['platform.html','The 4 Levels']]) +
