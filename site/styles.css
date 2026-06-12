@@ -98,8 +98,7 @@ a { color: inherit; }
   justify-content: space-between; gap: 18px;
 }
 .nav__brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
-.nav__brand img { height: 22px; width: auto; }
-.nav__brand .orca-wordmark { font-size: 16px; color: var(--app-ink); }
+.nav__brand img { height: 20px; width: auto; }
 
 .nav__menu { display: flex; align-items: center; gap: 2px; }
 .nav__link {
@@ -283,8 +282,7 @@ a { color: inherit; }
 .reframe__orca { display: flex; flex-direction: column; align-items: center; gap: 10px;
   padding: 28px 34px; border-radius: var(--radius-lg); background: var(--orca-gradient-soft);
   color: var(--fg-on-dark-1); box-shadow: var(--shadow-float); }
-.reframe__orca img { height: 34px; }
-.reframe__orca .orca-wordmark { font-size: 18px; }
+.reframe__orca img { height: 30px; width: auto; }
 .reframe__orca .sub { font-size: 12px; color: var(--fg-on-dark-2); }
 
 /* ============================================================
@@ -382,8 +380,7 @@ a { color: inherit; }
 .footer { background: var(--orca-gradient-soft); color: var(--fg-on-dark-1); }
 .footer__grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 36px; padding: 60px 40px 32px; }
 .footer__brand { display: flex; align-items: center; gap: 10px; }
-.footer__brand img { height: 24px; }
-.footer__brand .orca-wordmark { font-size: 17px; }
+.footer__brand img { height: 22px; width: auto; }
 .footer__blurb { margin-top: 18px; font-size: 14.5px; line-height: 1.65; color: var(--fg-on-dark-2); max-width: 250px; }
 .footer__tag { margin-top: 18px; font-size: 14px; color: var(--fg-on-dark-2); }
 .footer__col .h { font-family: var(--font-sans); font-weight: var(--weight-semibold);
